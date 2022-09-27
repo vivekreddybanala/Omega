@@ -26,7 +26,6 @@ public class Login {
 			Statement Conn = new SqlConnection().getConn();
 			String query="select * from omega.Users where username='" + loginDetails.getUsername()
 			+ "' and password='" + loginDetails.getPassword()+"'";
-			System.out.println(query);
 			ResultSet rs = Conn.executeQuery(query);
 			String result = "Login Success for ";
 			if (rs.next()) {
